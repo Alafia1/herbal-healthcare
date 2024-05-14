@@ -5,7 +5,7 @@ type Props = {};
 
 const WelcomeCard = (props: Props) => {
   return (
-    <div className="flex justify-center items-center gap-10 mt-6 px-20">
+    <div className="flex md:flex-row flex-col justify-center items-center gap-10 mt-6 md:px-20 py-4 px-2">
       <div className="flex-1 flex justify-center items-center">
         <Image src="/images/image.jpg" width={400} height={400} alt="image" />
       </div>
