@@ -1,113 +1,107 @@
+import Navbar from "@/components/Navbar";
+import ReviewsCard from "@/components/ReviewsCard";
+import WelcomeCard from "@/components/WelcomeCard";
+import WhyChooseCard from "@/components/WhyChooseCard";
+import { Button } from "@/components/ui/button";
 import Image from "next/image";
 
 export default function Home() {
   return (
-    <main className="flex min-h-screen flex-col items-center justify-between p-24">
-      <div className="z-10 w-full max-w-5xl items-center justify-between font-mono text-sm lg:flex">
-        <p className="fixed left-0 top-0 flex w-full justify-center border-b border-gray-300 bg-gradient-to-b from-zinc-200 pb-6 pt-8 backdrop-blur-2xl dark:border-neutral-800 dark:bg-zinc-800/30 dark:from-inherit lg:static lg:w-auto  lg:rounded-xl lg:border lg:bg-gray-200 lg:p-4 lg:dark:bg-zinc-800/30">
-          Get started by editing&nbsp;
-          <code className="font-mono font-bold">src/app/page.tsx</code>
-        </p>
-        <div className="fixed bottom-0 left-0 flex h-48 w-full items-end justify-center bg-gradient-to-t from-white via-white dark:from-black dark:via-black lg:static lg:size-auto lg:bg-none">
-          <a
-            className="pointer-events-none flex place-items-center gap-2 p-8 lg:pointer-events-auto lg:p-0"
-            href="https://vercel.com?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            By{" "}
-            <Image
-              src="/vercel.svg"
-              alt="Vercel Logo"
-              className="dark:invert"
-              width={100}
-              height={24}
-              priority
-            />
-          </a>
-        </div>
+    <div>
+      <div className="bg-green-100 px-8 py-4">
+        <Navbar />
+        <WelcomeCard />
       </div>
+      <div className="bg-green-200 flex flex-col justify-center items-center py-6">
+        <Image src="/images/why.png" width={200} height={200} alt="image" />
+        <p className="text-2xl font-bold">
+          Why should you take Herbal Healthcare Products?
+        </p>
+      </div>
+      <div className="bg-green-100 flex justify-center px-16 gap-2">
+        <WhyChooseCard
+          img={"/images/immune.jpg"}
+          text={
+            "Strengthening your immune system is crucial when fighting cancer. Our immune-boosting products are packed with powerful antioxidant, vitamins, and minerals to fortify your body’s natural defenses."
+          }
+          title={"Immune Boosters"}
+        />
 
-      <div className="relative z-[-1] flex place-items-center before:absolute before:h-[300px] before:w-full before:-translate-x-1/2 before:rounded-full before:bg-gradient-radial before:from-white before:to-transparent before:blur-2xl before:content-[''] after:absolute after:-z-20 after:h-[180px] after:w-full after:translate-x-1/3 after:bg-gradient-conic after:from-sky-200 after:via-blue-200 after:blur-2xl after:content-[''] before:dark:bg-gradient-to-br before:dark:from-transparent before:dark:to-blue-700 before:dark:opacity-10 after:dark:from-sky-900 after:dark:via-[#0141ff] after:dark:opacity-40 sm:before:w-[480px] sm:after:w-[240px] before:lg:h-[360px]">
-        <Image
-          className="relative dark:drop-shadow-[0_0_0.3rem_#ffffff70] dark:invert"
-          src="/next.svg"
-          alt="Next.js Logo"
-          width={180}
-          height={37}
-          priority
+        <WhyChooseCard
+          img={"/images/antioxidant.jpg"}
+          text={
+            "Oxidative stress can contribute to the development and progression of cancer. Our antioxidant-rich supplements neutralize harmful free radicals, promoting cellular health and reducing the risk of oxidative damage."
+          }
+          title={"Antioxidant Support"}
+        />
+        <WhyChooseCard
+          img={"/images/inflammatory.jpg"}
+          text={
+            "Chronic inflammation has been linked to various types of cancer. Our anti-inflammatory products leverage the natural anti-inflammatory properties of botanical extracts and nutrients to support a balanced inflammatory response."
+          }
+          title={"Anti-Inflammatory Solutions"}
         />
       </div>
+      <div className="bg-green-100 flex justify-center px-16 gap-2 pt-1">
+        <WhyChooseCard
+          img={"/images/detoxify.jpg"}
+          text={
+            "Detoxifying the body can optimize its ability to fight cancer. Our detox products are carefully formulated to support the elimination of toxins and promote cellular health."
+          }
+          title={"Detoxification Support"}
+        />
 
-      <div className="mb-32 grid text-center lg:mb-0 lg:w-full lg:max-w-5xl lg:grid-cols-4 lg:text-left">
-        <a
-          href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className="mb-3 text-2xl font-semibold">
-            Docs{" "}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className="m-0 max-w-[30ch] text-sm opacity-50">
-            Find in-depth information about Next.js features and API.
-          </p>
-        </a>
-
-        <a
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className="mb-3 text-2xl font-semibold">
-            Learn{" "}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className="m-0 max-w-[30ch] text-sm opacity-50">
-            Learn about Next.js in an interactive course with&nbsp;quizzes!
-          </p>
-        </a>
-
-        <a
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className="mb-3 text-2xl font-semibold">
-            Templates{" "}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className="m-0 max-w-[30ch] text-sm opacity-50">
-            Explore starter templates for Next.js.
-          </p>
-        </a>
-
-        <a
-          href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className="mb-3 text-2xl font-semibold">
-            Deploy{" "}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className="m-0 max-w-[30ch] text-balance text-sm opacity-50">
-            Instantly deploy your Next.js site to a shareable URL with Vercel.
-          </p>
-        </a>
+        <WhyChooseCard
+          img={"/images/nutrition.png"}
+          text={
+            "Proper nutrition is vital during cancer treatment. Our range of nutritional supplements that is inclusive in this pack provides essential vitamins, minerals, and nutrients to support overall health and vitality."
+          }
+          title={"Nutritional Supplements"}
+        />
+        <WhyChooseCard
+          img={"/images/digestion.jpg"}
+          text={
+            "Oxidative stress can contribute to the development and progression of cancer. Our antioxidant-rich supplements neutralize harmful free radicals, promoting cellular health and reducing the risk of oxidative damage."
+          }
+          title={"Aids Digestion"}
+        />
       </div>
-    </main>
+      <div className="bg-green-100 justify-center items-center px-16 gap-2">
+        <div className="flex justify-center items-center pt-8">
+          <div className="flex flex-1 justify-end relative">
+            <Image
+              src="/images/leaves1.png"
+              width={500}
+              height={500}
+              alt="image"
+            />
+            <div className="absolute left-1/3 top-2">
+              <p className="text-2xl font-bold">Customers Reviews</p>
+            </div>
+            <div className="mt-5 absolute top-14 left-0 flex gap-2 w-5/6">
+              <ReviewsCard
+                text="I was diagnosed with cancer, and the news was devastating. I wanted
+            to explore all options, including natural remedies. That’s when I
+            discovered these incredible natural products. Incorporating them
+            into my treatment plan has made a remarkable difference in my
+            overall well-being. I feel more energized, my immune system is
+            stronger, and I believe they are complementing my conventional
+            treatment. I highly recommend these products to anyone fighting
+            cancer."
+                name="Debrah Mirembe, Uganda"
+              />
+              <ReviewsCard
+                text="As a healthcare professional, I am always cautious about recommending natural products. However, after extensive research, I came across this exceptional line of supplements. I have seen remarkable results in my patients who have incorporated these products into their cancer treatment plans. The science-backed formulations and premium quality ingredients give me confidence in their effectiveness. I wholeheartedly endorse these natural products for anyone seeking additional support during their cancer journey"
+                name="Dr. Amahle Johnson, MD, Pretoria"
+              />
+              <ReviewsCard
+                text="After going through the grueling process of chemotherapy, I was looking for ways to support my body’s healing. These natural supplements have been a game-changer for me. They have helped reduce inflammation, boost my immune system, and restore my energy levels. I’m so grateful to have found these products on my journey to recovery"
+                name="Solomon Koffi , Ghana"
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
   );
 }
